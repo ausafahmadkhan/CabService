@@ -4,9 +4,9 @@ import urllib3
 import boto3
 
 
-r = redis.Redis(host= 'redis-12008.c85.us-east-1-2.ec2.cloud.redislabs.com',port= '12008', username= "ausaf", password="Drogon@23")
+r = redis.Redis(host= 'redis-host',port= '6379', username= "user", password="pwd")
 
-client = boto3.client('apigatewaymanagementapi', endpoint_url= 'https://cgfkooghv6.execute-api.us-east-1.amazonaws.com/prod')
+client = boto3.client('apigatewaymanagementapi', endpoint_url= 'https://abc/stage')
 
 def lambda_handler(event, context):
     body = json.loads(event['body'])
